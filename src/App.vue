@@ -1,7 +1,7 @@
 <template>
 	<NcAppContent>
-		<div id="app_template">
-			<h1>Hello world!</h1>
+		<div id="deck_bridge_flow">
+			<h1>Deck Bridge Flow</h1>
 		</div>
 	</NcAppContent>
 </template>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#app_template {
+#deck_bridge_flow {
 	display: flex;
 	justify-content: center;
 	margin: 16px;

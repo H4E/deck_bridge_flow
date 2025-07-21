@@ -9,8 +9,13 @@ use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 
+use OCA\DeckBridgeFlow\Hooks\CardHook;
+use OCA\DeckBridgeFlow\Flow\Trigger\CardMovedTrigger;
+use OCP\WorkflowEngine\Manager;
+use OCP\EventDispatcher\IEventDispatcher;
+
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'app_template';
+	public const APP_ID = 'deck_bridge_flow';
 
 	/** @psalm-suppress PossiblyUnusedMethod */
 	public function __construct() {
@@ -18,8 +23,25 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-	}
+  $context->registerService(CardHook::class, function ($c) {
+  return new CardHook(
+		$c->get(\OCP\WorkflowEngine\Manager::class),
+		$c->get(\OCA\Deck\Db\StackMapper::class),
+		$c->get(\OCA\Deck\Db\BoardMapper::class)
+	);  
+  });
+  
+  }
 
 	public function boot(IBootContext $context): void {
+  // Register Flow Trigger
+		/** @var Manager $flowManager */
+		$flowManager = $context->getAppContainer()->get(Manager::class);
+		$flowManager->registerTrigger(CardMovedTrigger::class);
+
+		// Register Deck card event listener
+		/** @var IEventDispatcher $eventDispatcher */
+		$eventDispatcher = $context->getAppContainer()->get(IEventDispatcher::class);
+		$eventDispatcher->addServiceListener(CardHook::class, CardHook::class);
 	}
 }

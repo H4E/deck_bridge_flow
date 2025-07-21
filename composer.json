@@ -1,12 +1,12 @@
 {
-	"name": "nextcloud/app_template",
-	"description": "An example description",
+	"name": "h4e/deck_bridge_flow",
+	"description": "Make Deck API available for flow actions",
 	"license": "AGPL-3.0-or-later",
 	"authors": [
 		{
-			"name": "example",
-			"email": "example@example.com",
-			"homepage": "https://example.com"
+			"name": "Jeremy Fouriaux",
+			"email": "jeremy@h4e.tech",
+			"homepage": "/dev/null"
 		}
 	],
 	"autoload": {

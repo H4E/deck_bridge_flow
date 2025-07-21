@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-	<id>app_template</id>
-	<name>App Template</name>
+	<id>deck_bridge_flow</id>
+	<name>Deck Bridge Flow</name>
 	<summary>An example summary</summary>
 	<description>An example description</description>
 	<version>1.0.0</version>
@@ -12,13 +12,15 @@
 	<category>customization</category>
 	<bugs>https://example.com/bugs</bugs>
 	<dependencies>
-		<nextcloud min-version="29" max-version="31"/>
+    <nextcloud min-version="29" max-version="31"/>
+    <dependency>workflowengine</dependency>
+    <dependency>deck</dependency>
 	</dependencies>
 	<navigations>
 		<navigation>
-			<id>app_template</id>
+			<id>deck_bridge_flow</id>
 			<name>App Template</name>
-			<route>app_template.page.index</route>
+			<route>deck_bridge_flow.page.index</route>
 			<icon>app.svg</icon>
 			<type>link</type>
 		</navigation>

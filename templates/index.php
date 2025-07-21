@@ -9,4 +9,4 @@ Util::addStyle(OCA\AppTemplate\AppInfo\Application::APP_ID, OCA\AppTemplate\AppI
 
 ?>
 
-<div id="app_template"></div>
+<div id="deck_bridge_flow"></div>
