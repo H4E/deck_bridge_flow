@@ -38,7 +38,7 @@ class CardHook implements EventSubscriberInterface {
 			$stack = $this->stackMapper->find($card->getStackId());
 			$board = $this->boardMapper->find($card->getBoardId());
 		} catch (\Throwable $e) {
-			\OC::$server->getLogger()->error('DeckFlowBridge: Failed to resolve board or stack', ['exception' => $e]);
+			\OC::$server->getLogger()->error('DeckBridgeFlow: Failed to resolve board or stack', ['exception' => $e]);
 			return;
 		}
 
