@@ -8,7 +8,7 @@
 	<version>1.0.0</version>
 	<licence>agpl</licence>
 	<author mail="example@example.com" homepage="https://example.com">Example</author>
-	<namespace>OCA\DeckBridgeFlow</namespace>
+	<namespace>DeckBridgeFlow</namespace>
 	<category>customization</category>
   <bugs>https://example.com/bugs</bugs>
   <flow>
