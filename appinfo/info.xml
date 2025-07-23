@@ -8,12 +8,12 @@
 	<version>1.0.0</version>
 	<licence>agpl</licence>
 	<author mail="example@example.com" homepage="https://example.com">Example</author>
-	<namespace>AppTemplate</namespace>
+	<namespace>OCA\DeckBridgeFlow</namespace>
 	<category>customization</category>
   <bugs>https://example.com/bugs</bugs>
   <flow>
     <triggers>
-      <trigger>OCA\DeckFlowBridge\Flow\Trigger\CardMovedTrigger</trigger>
+      <trigger>OCA\DeckBridgeFlow\Flow\Trigger\CardMovedTrigger</trigger>
     </triggers>
   </flow>
 	<dependencies>

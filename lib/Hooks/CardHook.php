@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\DeckFlowBridge\Hooks;
+namespace OCA\DeckBridgeFlow\Hooks;
 
 use OCA\Deck\Service\CardManagerEvent;
 use OCA\Deck\Db\StackMapper;

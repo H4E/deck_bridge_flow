@@ -1,6 +1,6 @@
 <?php
 
-namespace OCA\DeckFlowBridge\Flow\Trigger;
+namespace OCA\DeckBridgeFlow\Flow\Trigger;
 
 use OCP\WorkflowEngine\ICheckableTrigger;
 use OCP\WorkflowEngine\ITriggerConsumer;
