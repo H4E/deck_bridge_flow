@@ -41,16 +41,12 @@ class CardMovedTrigger implements ICheckableTrigger {
     public function getConstraints(): array {
         return [
           new GenericCheck('boardName', 'Board Name', GenericCheck::TYPE_TEXT),
-          new GenericCheck('stackName', 'List Name (Column)', GenericCheck::TYPE_TEXT),m        ];
+          new GenericCheck('stackName', 'List Name (Column)', GenericCheck::TYPE_TEXT),];
     }
 
     public function matches(IEvent $event, array $checks): bool {
         // `$event->getParameters()` contains keys: stackId, boardId, cardTitle, etc.
         return GenericCheck::matchEvents($checks, $event->getParameters());
-    }
-
-    public function getDefaultEvents(): array {
-        return ['card_moved'];
     }
 }
 

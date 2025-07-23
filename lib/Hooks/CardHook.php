@@ -51,6 +51,6 @@ class CardHook implements EventSubscriberInterface {
 			'boardName'  => $board->getTitle(),
 		];
 
-		$this->flowManager->triggerFlow('deck_flow_bridge_card_event', $params, 'card_moved');
+		$this->flowManager->triggerFlow('deck_bridge_flow_card_event', $params, 'card_moved');
 	}
 }
