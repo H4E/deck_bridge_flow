@@ -10,7 +10,12 @@
 	<author mail="example@example.com" homepage="https://example.com">Example</author>
 	<namespace>AppTemplate</namespace>
 	<category>customization</category>
-	<bugs>https://example.com/bugs</bugs>
+  <bugs>https://example.com/bugs</bugs>
+  <flow>
+    <triggers>
+      <trigger>OCA\DeckFlowBridge\Flow\Trigger\CardMovedTrigger</trigger>
+    </triggers>
+  </flow>
 	<dependencies>
     <nextcloud min-version="29" max-version="31"/>
     <dependency>workflowengine</dependency>
@@ -19,7 +24,7 @@
 	<navigations>
 		<navigation>
 			<id>deck_bridge_flow</id>
-			<name>App Template</name>
+			<name>Deck Bridge Flow</name>
 			<route>deck_bridge_flow.page.index</route>
 			<icon>app.svg</icon>
 			<type>link</type>

@@ -37,7 +37,6 @@ class Application extends App implements IBootstrap {
   // Register Flow Trigger
 		/** @var Manager $flowManager */
 		$flowManager = $context->getAppContainer()->get(IManager::class);
-		$flowManager->registerTrigger(CardMovedTrigger::class);
 
 		// Register Deck card event listener
 		/** @var IEventDispatcher $eventDispatcher */
